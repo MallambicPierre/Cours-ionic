@@ -1,5 +1,7 @@
 {
   "name": "artmap",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

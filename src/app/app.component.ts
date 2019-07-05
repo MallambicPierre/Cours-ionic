@@ -5,7 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
+  // Le selector correspond au nom d'une balise qu'on rappelle dans le index.html
   selector: 'app-root',
+  // Le templateUrl correspond au fichier app.component.html
   templateUrl: 'app.component.html'
 })
 export class AppComponent {

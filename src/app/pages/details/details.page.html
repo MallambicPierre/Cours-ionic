@@ -1,0 +1,40 @@
+<ion-content color="secondary">
+    <ion-card>
+        <img [src]="place.image">
+        <ion-card-header>
+            <ion-card-title>
+                <h1>{{place.nom}}</h1>
+            </ion-card-title>
+        </ion-card-header>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-icon [name]="place.categorie | catIcon"></ion-icon>
+                    Catégorie : {{place.categorie}}
+                </ion-col>
+                <ion-col>
+                    Note : {{place.note}}/5
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+
+    <ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-card-content >
+                        <div class="description-show" appDescriptionShow> description : {{ place.description }}</div>
+                    </ion-card-content>
+                </ion-col>
+                <ion-col>
+                    <ion-card-content>Coordonnées GPS : {{place.GPS}}</ion-card-content>
+                </ion-col>
+                <ion-col>
+                    <ion-card-content>Date d'ajout : {{place.date | date:"dd/MM/yyyy"}}</ion-card-content>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,27 @@
+ <ion-content color="secondary">
+     <div *ngIf="places.length > 0; else noData">
+         <h1>Il y a {{ places.length }} zones qui ont été ajoutées récemment.</h1>
+        <div class="row" *ngFor="let list of places">
+
+          <ion-card expand="block" >
+            <img [routerLink]="['/details/', list.id]" [src]="list.image">
+            <ion-card-header>
+              <ion-card-title>{{list.nom}}</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+         <ng-template #noData>
+             Aucun résultat disponible
+         </ng-template>
+     </div>
+
+
+   <div class="col">
+       <ion-fab vertical="top" horizontal="start" slot="fixed">
+           <ion-fab-button color="tertiary" class="button" expand="block" (click)="presentAlert()">
+                <ion-icon name="add-circle-outline"></ion-icon>
+           </ion-fab-button>
+       </ion-fab>
+   </div>
+  </ion-content>
+

@@ -1,3 +1,27 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<!--Correspont au TemplateUrl du @ Component-->
+
+
+<ion-app >
+  <ion-router-outlet >
+    <div class="ion-padding" >
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <a class="home" tab="home" [routerLink]="['/home']">
+            <ion-icon  name="home"></ion-icon><br>
+            <ion-label>Menu principal</ion-label>
+          </a>
+
+          <a class="map" tab="map" [routerLink]="['/list']">
+            <ion-icon  name="map"></ion-icon><br>
+            <ion-label>Lieux à visiter</ion-label>
+          </a>
+
+          <a class="details" tab="details" [routerLink]="['/details']">
+            <ion-icon  name="settings"></ion-icon><br>
+            <ion-label>Réglages</ion-label>
+          </a>
+        </ion-tab-bar>
+      </ion-tabs>
+    </div>
+  </ion-router-outlet>
 </ion-app>

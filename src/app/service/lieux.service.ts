@@ -1,0 +1,58 @@
+import { Injectable } from '@angular/core';
+import { Place } from '../model/place';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LieuxService {
+  private places: Array<Place>;
+
+  constructor() {
+    this.places = [
+      {
+        id : 1,
+        nom : 'Nantes',
+        description : 'You guys look great. Mom, you look so thin. I gotta go, uh, I gotta go. Thanks very much, it was wonderful, you were all great. See you all later, much later. Ah, honey, your first novel. Will you take care of that? Right.',
+        GPS : '47° 13\' 6.136" N 1° 33\' 13.036" W',
+        image : 'https://www.presseocean.fr/sites/presseocean.fr/files/imagecache/detail/2017/08/31/561b8658-495200.jpg',
+        note : 3,
+        categorie : 'Immeuble',
+        date : '01/07/2019',
+      },
+      {
+        id : 2,
+        nom : 'Brest',
+        description : 'That\'s a big bruise you have there. Now that\'s a risk you\'ll have to take you\'re life depends on it. In that case, I\'ll tell you strait out. Huh? Well, you mean, it makes perfect sense.',
+        GPS : ' 48° 23\' 25.418" N 4° 29\' 9.874" W',
+        image : 'http://www.diazmag.com/wp-content/uploads/2015/09/urbex-27.jpg',
+        note : 2,
+        categorie : 'Bâtiment',
+        date : '01/07/2019',
+      },
+      {
+        id : 3,
+        nom : 'Saint-Pétersbourg',
+        description : 'No, Marty, we\'ve already agreed that having information about the future could be extremely dangerous. Even if your intentions are good, they could backfire drastically. Whatever you\'ve got to tell me I\'ll find out through the natural course of time. I don\'t wanna know your name. I don\'t wanna know anything anything about you. Why that\'s me, look at me, I\'m an old man. Right. A colored mayor, that\'ll be the day.',
+        GPS : '59° 56\' 3.408" N 30° 20\' 6.356" E',
+        image : 'http://referentiel.nouvelobs.com/file/14220418-grand-format-urbex-il-fait-un-tour-d-europe-des-lieux-abandonnes.jpg',
+        note : 4,
+        categorie : 'Usine',
+        date : '01/07/2019',
+      }
+
+    ];
+  }
+
+  getAll() {
+    return this.places;
+  }
+
+  get( id: number){
+    for (let place of this.places) {
+      if (place.id == id ) {
+        return place;
+      }
+    }
+    return false;
+  }
+}

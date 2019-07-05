@@ -4,3 +4,46 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+
+.title{
+  text-align: center;
+  font-size: 24px;
+}
+
+a{
+  text-decoration: none;
+  padding: 50px;
+
+}
+
+*{
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+img{
+  border-radius: 50%;
+  width: 350px!important;
+  height: 300px!important;
+  margin: 0 auto;
+}
+
+ion-tab-bar{
+  background: var( --ion-color-tertiary);
+}
+
+.content {
+  background: var( --ion-color-tertiary);;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+img.logo {
+  width: 75px!important;
+  height: 75px!important;
+}
+
